@@ -1,0 +1,151 @@
+.price-list-accord {
+  margin-top: 40px;
+
+  .title {
+    margin-bottom: 42px;
+    @media (max-width: 991px) {
+      margin-bottom: 36px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 575px) {
+      margin-bottom: 24px;
+    }
+    font-size: 18px;
+    line-height: 1.58;
+    font-weight: 600;
+  }
+
+  .small-title {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    cursor: pointer;
+    @media (max-width: 575px) {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ebf3f5;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      gap: 50px;
+    }
+
+    .icon {
+      svg {
+        transition: 0.3s;
+        transform: rotate(-90deg);
+      }
+    }
+
+    .name {
+      text-decoration: underline;
+      @media (max-width: 575px) {
+        text-decoration: none;
+      }
+      font-weight: 700;
+      font-size: 16px;
+      @media (max-width: 991px) {
+        font-size: 15px;
+      }
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+      @media (max-width: 575px) {
+        font-size: 12px;
+      }
+      line-height: 1.59;
+      transition: 0.3s;
+    }
+
+    .price {
+      margin-left: auto;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.6;
+      @media (max-width: 991px) {
+        font-size: 15px;
+      }
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+      @media (max-width: 575px) {
+        display: none;
+      }
+    }
+  }
+
+  .desc {
+    margin-top: 14px;
+    @media (max-width: 575px) {
+      margin-top: 16px;
+      font-size: 12px;
+    }
+    font-size: 13px;
+    line-height: 1.58;
+    transition: 0.3s;
+    opacity: 1;
+
+    span {
+      font-weight: 700;
+      color: var(--gray-title);
+      font-size: 14px;
+      @media (max-width: 575px) {
+        font-size: 12px;
+      }
+      line-height: 1.58;
+    }
+  }
+
+  .et_accordion_repeater {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @media (max-width: 991px) {
+      gap: 34px;
+    }
+    @media (max-width: 575px) {
+      gap: 30px;
+    }
+    @media (max-width: 575px) {
+      gap: 24px;
+    }
+  }
+
+  .is-contracted {
+    .small-title {
+      .name {
+        text-decoration-color: transparent !important;
+      }
+      .icon {
+        svg {
+          transform: rotate(0deg);
+        }
+      }
+    }
+    .desc {
+      opacity: 0 !important;
+      margin-top: 0 !important;
+    }
+  }
+
+  .price-list-accord--main_repeater {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    @media (max-width: 767px) {
+      gap: 54px;
+    }
+    @media (max-width: 575px) {
+      gap: 48px;
+    }
+  }
+
+  .et_accordion__single-wrapper {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+    @media (max-width: 575px) {
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+}

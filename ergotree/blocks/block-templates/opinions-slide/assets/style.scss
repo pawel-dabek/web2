@@ -1,0 +1,149 @@
+.opinions-slide {
+  margin-top: 155px;
+  @media screen and (max-width: 767px) {
+    margin-top: 100px;
+  }
+  @media screen and (max-width: 575px) {
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+  margin-bottom: -60px;
+
+  .title {
+    span {
+      color: var(--red);
+    }
+  }
+
+  .splide__indicator {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+    @media (max-width: 575px) {
+      display: none;
+    }
+    li {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.59;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-underline-offset: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &.is-active {
+        color: var(--red);
+        text-decoration-color: var(--red);
+      }
+    }
+  }
+
+  .splide__track {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media (max-width: 575px) {
+      padding-top: 40px;
+      padding-bottom: 25px;
+      overflow: visible;
+    }
+  }
+
+  .splide__pagination {
+    padding: 0;
+    display: flex;
+    gap: 8px;
+
+    li {
+      display: flex;
+      line-height: unset;
+      button {
+        padding: 0;
+        margin: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: none;
+        background: #ebf3f5;
+        transition: 0.3s;
+        &.is-active {
+          background: var(--red);
+        }
+      }
+    }
+  }
+
+  .splide__slide {
+    .opinion-wrapper {
+      padding: 30px 40px;
+      box-shadow: 0px 4px 31px 10px rgba(109, 103, 108, 0.05);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+      gap: 20px;
+      @media (max-width: 575px) {
+        padding: 32px 28px;
+        gap: 0;
+      }
+
+      .name {
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .stars {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 20px;
+        @media (max-width: 575px) {
+          gap: 4px;
+          margin-top: 16px;
+
+          svg {
+            width: 8px;
+            height: auto;
+          }
+        }
+      }
+
+      .desc {
+        margin: 65px 0 45px;
+        @media (max-width: 575px) {
+          margin: 24px 0;
+        }
+        line-height: 1.59;
+        text-align: justify;
+      }
+
+      .logo {
+        img {
+          width: 120px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .splide__arrows {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: -25px;
+    width: calc(100% + 50px);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}

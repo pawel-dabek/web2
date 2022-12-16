@@ -1,0 +1,151 @@
+.recrutation-process {
+  margin-top: 155px;
+  padding: 155px 0;
+  background: var(--blue-mist);
+  @media (max-width: 991px) {
+    margin-top: 120px;
+    padding: 120px 0;
+  }
+  @media (max-width: 767px) {
+    margin-top: 100px;
+    padding: 100px 0;
+  }
+  @media (max-width: 575px) {
+    margin-top: 80px;
+    padding: 80px 0;
+  }
+
+  .title {
+    margin-bottom: 60px;
+    @media (max-width: 575px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .row {
+    --bs-gutter-x: 90px;
+    --bs-gutter-y: 40px;
+    @media (max-width: 991px) {
+      --bs-gutter-x: 60px;
+    }
+  }
+
+  @keyframes color-change {
+    0% {
+      color: transparent;
+      -webkit-text-stroke: 1px var(--gray-title);
+    }
+    50% {
+      color: var(--red);
+      -webkit-text-stroke: 1px var(--red);
+    }
+    100% {
+      color: transparent;
+      -webkit-text-stroke: 1px var(--gray-title);
+    }
+  }
+
+  .animated {
+    .single {
+      .number {
+        animation: color-change 2s;
+        animation-delay: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      .single {
+        .number {
+          animation-delay: 500ms;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .single {
+        .number {
+          animation-delay: 1000ms;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .single {
+        .number {
+          animation-delay: 1500ms;
+        }
+      }
+    }
+  }
+
+  .single {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    @media (max-width: 575px) {
+      flex-direction: row;
+      align-items: center;
+      gap: 25px;
+    }
+
+    &:hover {
+      .number {
+        color: var(--red);
+        -webkit-text-stroke: 1px var(--red);
+      }
+
+      .small-title {
+        color: var(--red);
+      }
+    }
+
+    * {
+      text-align: center;
+      @media (max-width: 575px) {
+        text-align: left;
+      }
+    }
+
+    .number {
+      font-size: 65px;
+      line-height: 66px;
+      -webkit-text-stroke: 1px var(--gray-title);
+      color: transparent;
+      transition: 0.3s;
+      @media (max-width: 575px) {
+        font-size: 75px;
+        width: 40px;
+      }
+    }
+
+    .text {
+      @media (max-width: 575px) {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    .small-title {
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--gray-title);
+      white-space: nowrap;
+      transition: 0.3s;
+      @media (max-width: 991px) {
+        white-space: unset;
+      }
+      @media (max-width: 575px) {
+        font-size: 16px;
+      }
+    }
+
+    .desc {
+      font-size: 13px;
+      line-height: 1.5;
+      @media (max-width: 575px) {
+        font-size: 12px;
+      }
+    }
+  }
+}

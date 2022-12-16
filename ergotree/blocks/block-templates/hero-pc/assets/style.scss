@@ -1,0 +1,281 @@
+.hero-pc {
+  padding: 155px 0 90px;
+  height: 590px;
+  z-index: 2;
+  @media (max-width: 991px) {
+    height: 554px;
+    padding: 140px 0 120px;
+  }
+  @media (max-width: 767px) {
+    height: 526px;
+    padding: 130px 0 140px;
+  }
+  @media (max-width: 575px) {
+    height: 496px;
+    padding: 120px 0 160px;
+  }
+  background: var(--red);
+
+  .scroll-down {
+    @media (min-width: 576px) {
+      display: none;
+    }
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 2s ease-in-out 0s infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      bottom: 40px;
+    }
+    50% {
+      bottom: 25px;
+    }
+    100% {
+      bottom: 40px;
+    }
+  }
+
+  .title {
+    color: #fff;
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 1.24;
+    white-space: nowrap;
+    @media (max-width: 991px) {
+      font-size: 60px;
+    }
+    @media (max-width: 767px) {
+      font-size: 45px;
+    }
+    @media (max-width: 575px) {
+      font-size: 30px;
+      white-space: unset;
+    }
+  }
+
+  .autoComplete_wrapper {
+    --font-size: 16px;
+    @media (max-width: 991px) {
+      --font-size: 15px;
+    }
+    @media (max-width: 767px) {
+      --font-size: 14px;
+    }
+    @media (max-width: 575px) {
+      --font-size: 13px;
+    }
+    display: block;
+    width: min(100%, 560px);
+
+    & > input {
+      height: unset;
+
+      &:focus {
+        &::placeholder {
+          transform: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+
+    input[type='color'],
+    input[type='date'],
+    input[type='datetime'],
+    input[type='datetime-local'],
+    input[type='email'],
+    input[type='month'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='time'],
+    input[type='url'],
+    input[type='week'],
+    input,
+    select:focus,
+    textarea {
+      font-size: 16px !important;
+    }
+
+    .arrow-up,
+    .arrow-down {
+      background-image: url('/wp-content/themes/ergotree/assets/img/arrow_up.svg');
+      filter: brightness(0) invert(84%) sepia(2%) saturate(707%) hue-rotate(284deg) brightness(69%) contrast(98%);
+      position: sticky;
+      top: 0;
+      display: flex;
+      width: 20px;
+      height: 11px;
+      margin-left: auto;
+      transform: translateX(30px) translateY(20px);
+      transition: 0.3s;
+      cursor: pointer;
+
+      &.active {
+        filter: brightness(0) invert(92%) sepia(10%) saturate(924%) hue-rotate(180deg) brightness(112%) contrast(91%);
+      }
+    }
+
+    .arrow-down {
+      background-image: url('/wp-content/themes/ergotree/assets/img/arrow_down.svg');
+      top: unset;
+      bottom: 0;
+      transform: translateX(30px) translateY(-20px);
+    }
+
+    &[aria-expanded='true'] {
+      input {
+        background-image: url('/wp-content/themes/ergotree/assets/img/search-red.svg');
+        background-color: #fff;
+        color: var(--red);
+
+        &::placeholder {
+          color: var(--red);
+        }
+      }
+    }
+
+    ul {
+      color: var(--red);
+      padding: 0 62px 0 62px;
+      border-radius: 34px;
+      max-height: 260px;
+      @media (max-width: 575px) {
+        padding: 0 54px 0 24px;
+      }
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &:after,
+      &:before {
+        content: '';
+        position: sticky;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background: #fff;
+        z-index: 3;
+      }
+
+      &:after {
+        top: unset;
+        bottom: 0;
+      }
+
+      li {
+        padding: 0;
+        margin: 0;
+        padding: 20px 0;
+        @media (max-width: 575px) {
+          padding: 10px 0;
+        }
+        color: var(--red);
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: 0.3s;
+        font-weight: 400;
+        font-size: var(--font-size);
+        white-space: break-spaces;
+
+        mark {
+          color: var(--red);
+        }
+
+        &[aria-selected='true'] {
+          background: transparent;
+          text-decoration-color: var(--red);
+          font-weight: 700;
+        }
+
+        &:hover {
+          background: unset;
+          text-decoration-color: var(--red);
+        }
+      }
+    }
+  }
+
+  .datalist {
+    margin: 60px 0;
+    @media (max-width: 991px) {
+      margin: 40px 0;
+    }
+    @media (max-width: 575px) {
+      margin: 40px 0 24px;
+    }
+    width: 100%;
+    input {
+      background-color: rgba(0, 0, 0, 0);
+      background-image: url(/wp-content/themes/ergotree/assets/img/search-white.svg);
+      background-repeat: no-repeat;
+      background-position-x: 20px;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      border: 1px solid #fff;
+      border-radius: 34px;
+      outline: none;
+      color: #fff;
+      font-size: var(--font-size);
+      line-height: 1.58;
+      font-weight: 400;
+      width: min(100%, 560px);
+      padding: 23px 35px 23px 62px;
+      @media (max-width: 575px) {
+        font-size: 12px;
+        padding: 20px 20px 20px 54px;
+      }
+
+      &::placeholder {
+        font-size: var(--font-size);
+        line-height: 1.58;
+        color: #fff;
+      }
+
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+        opacity: 0;
+      }
+    }
+  }
+
+  .desc {
+    font-size: 16px;
+    line-height: 1.6;
+    @media (max-width: 767px) {
+      font-size: 15px;
+    }
+    @media (max-width: 575px) {
+      font-size: 14px;
+    }
+    color: #fff;
+
+    br {
+      &.mobile {
+        @media (max-width: 575px) {
+          display: none;
+        }
+      }
+      &.tablet {
+        @media (min-width: 576px) and (max-width: 991px) {
+          display: none;
+        }
+      }
+      &.desktop {
+        @media (min-width: 992px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

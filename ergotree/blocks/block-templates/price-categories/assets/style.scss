@@ -1,0 +1,92 @@
+.price-categories {
+  margin-top: 60px;
+
+  .title {
+    font-size: 34px;
+    line-height: 1.5;
+    font-weight: 600;
+
+    @media (max-width: 991px) {
+      font-size: 33px;
+    }
+    @media (max-width: 767px) {
+      font-size: 32px;
+    }
+    @media (max-width: 575px) {
+      font-size: 30px;
+    }
+  }
+
+  .categories-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 170px;
+    & > * {
+      margin-bottom: 50px;
+      @media (max-width: 991px) {
+        margin-bottom: 40px;
+      }
+      @media (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+    }
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+    @media (max-width: 991px) {
+      margin-top: 50px;
+      column-gap: 120px;
+    }
+    @media (max-width: 767px) {
+      column-gap: 100px;
+    }
+    @media (max-width: 575px) {
+      margin-top: 40px;
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      position: relative;
+      @media (max-width: 575px) {
+        &:after {
+          content: '';
+          background-image: url('/wp-content/themes/ergotree/assets/img/caret.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 12px;
+          height: 12px;
+          transition: 0.3s;
+        }
+      }
+      a {
+        color: var(--red);
+        line-height: 1.6;
+        font-weight: 500;
+        text-underline-offset: 3px;
+        text-decoration-color: transparent;
+        transition: 0.3s;
+        @media (max-width: 575px) {
+          color: var(--gray);
+        }
+      }
+      &:hover {
+        a {
+          font-weight: 700;
+          color: var(--red);
+          text-decoration-color: var(--red);
+        }
+        &:after {
+          filter: brightness(0) invert(28%) sepia(21%) saturate(6567%) hue-rotate(325deg) brightness(96%) contrast(87%);
+        }
+      }
+    }
+  }
+}

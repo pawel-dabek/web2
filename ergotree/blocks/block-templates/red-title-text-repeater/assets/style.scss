@@ -1,0 +1,137 @@
+.red-title-text-repeater {
+  margin-top: 60px;
+  @media (max-width: 575px) {
+    margin-top: 40px;
+  }
+
+  .smaller-margin {
+    .row {
+      @media (max-width: 767px) {
+        --bs-gutter-y: 40px;
+      }
+      @media (max-width: 575px) {
+        --bs-gutter-y: 24px;
+      }
+    }
+  }
+
+  .smaller-margin-top {
+    @media (max-width: 575px) {
+      margin-top: -56px;
+    }
+  }
+
+  .row {
+    --bs-gutter-x: 90px;
+    --bs-gutter-y: 60px;
+    @media (max-width: 991px) {
+      --bs-gutter-x: 70px;
+    }
+    @media (max-width: 767px) {
+      --bs-gutter-y: 50px;
+    }
+    @media (max-width: 575px) {
+      --bs-gutter-y: 40px;
+    }
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 60px;
+    @media (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 45px;
+    }
+    @media (max-width: 575px) {
+      margin-bottom: 40px;
+      text-align: left;
+    }
+  }
+
+  .small-font {
+    @media (max-width: 575px) {
+      padding-top: 40px;
+    }
+    p {
+      font-size: 13px !important;
+      @media (max-width: 575px) {
+        font-size: 14px !important;
+      }
+    }
+    .title {
+      margin-bottom: 60px;
+      @media (max-width: 991px) {
+        margin-bottom: 45px;
+      }
+      @media (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+      @media (max-width: 575px) {
+        margin-bottom: 24px;
+      }
+    }
+    .row {
+      --bs-gutter-x: 170px;
+      @media (max-width: 991px) {
+        --bs-gutter-x: 120px;
+      }
+      @media (max-width: 899px) {
+        --bs-gutter-x: 80px;
+      }
+      @media (max-width: 767px) {
+        --bs-gutter-y: 40px;
+      }
+      @media (max-width: 575px) {
+        --bs-gutter-y: 24px;
+      }
+    }
+    .small-title {
+      font-size: 18px;
+      @media (max-width: 575px) {
+        font-size: 16px;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      padding-left: 18px;
+
+      li {
+        text-align: justify;
+        font-size: 13px;
+        line-height: 1.6;
+        @media (max-width: 575px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .single-wrapper {
+      font-weight: 500;
+      p {
+        text-align: justify;
+      }
+    }
+  }
+
+  .small-title {
+    margin-bottom: 20px;
+    @media (min-width: 768px) and (max-width: 991px) {
+      line-height: 1.3 !important;
+    }
+  }
+
+  .single-wrapper {
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      a {
+        color: var(--red);
+        font-weight: 700;
+      }
+    }
+  }
+}

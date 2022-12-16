@@ -1,0 +1,38 @@
+.single-info {
+   margin-top: 62px;
+   &--wrapper {
+      display: grid;
+      grid-template-columns: 384px 1fr;
+      column-gap: 62px;
+      .single-title {
+         font-size: 34px;
+         font-weight: 600;
+         line-height: 51px;
+         margin-bottom: 20px;
+         color: var(--red);
+      }
+      .category {
+         .post-categories {
+            display: block;
+            padding-left: 0;
+            li {
+               list-style: none;
+               padding: 9px 17px;
+               display: inline-flex;
+               border-radius: 19px;
+               border: 1px solid var(--red);
+               margin-right: 5px;
+               a {
+                  font-size: 14px;
+                  font-weight: 500;
+                  line-height: 21px;
+                  color: var(--red);
+
+                  text-decoration: none;
+
+               }
+            }
+         }
+      }
+   }
+}

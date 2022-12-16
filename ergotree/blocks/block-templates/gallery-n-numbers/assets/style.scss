@@ -1,0 +1,117 @@
+.gallery-n-numbers {
+  margin-top: 60px;
+
+  .container-grid {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.76fr 1.02fr 1.19fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    grid-template-areas: 'left center right';
+    @media (max-width: 767px) {
+      grid-template-columns: 1.02fr 1.19fr;
+      gap: 5px;
+      grid-template-areas: 'center right';
+    }
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr;
+      gap: 5px;
+      grid-template-areas: 'right';
+    }
+  }
+
+  .right {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.27fr 0.73fr;
+    gap: 5px;
+    grid-template-areas:
+      'right-upper'
+      'right-bottom';
+    grid-area: right;
+  }
+
+  .right-upper {
+    display: grid;
+    grid-template-columns: 0.96fr 1.04fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    grid-template-areas: 'right-upper-left right-upper-right';
+    grid-area: right-upper;
+  }
+
+  .right-upper-right {
+    grid-area: right-upper-right;
+  }
+
+  .right-upper-left {
+    grid-area: right-upper-left;
+  }
+
+  .right-bottom {
+    grid-area: right-bottom;
+  }
+
+  .center {
+    @media (max-width: 575px) {
+      display: none !important;
+    }
+    grid-area: center;
+  }
+
+  .left {
+    @media (max-width: 767px) {
+      display: none !important;
+    }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.27fr 0.73fr;
+    gap: 5px;
+    grid-template-areas:
+      'left-upper'
+      'left-lower';
+    grid-area: left;
+  }
+
+  .left-upper {
+    grid-area: left-upper;
+  }
+
+  .left-lower {
+    grid-area: left-lower;
+  }
+
+  .left-upper,
+  .left-lower,
+  .right-upper-left,
+  .right-upper-right,
+  .center {
+    display: flex;
+  }
+
+  .text {
+    background: #9c9296;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    @media (max-width: 767px) {
+      padding: 10px;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      color: #fff;
+      font-size: 20px;
+      line-height: 1.5;
+      @media (max-width: 991px) {
+        font-size: 16px;
+      }
+      @media (max-width: 767px) {
+        padding: 15px;
+      }
+    }
+  }
+}

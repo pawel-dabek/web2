@@ -1,0 +1,236 @@
+.main-archive-kariera {
+  .kariera-categories {
+    margin-top: 60px;
+    @media (max-width: 991px) {
+      gap: 100px;
+    }
+    @media (max-width: 767px) {
+      gap: 80px;
+    }
+
+    .wrapper-categories {
+      display: flex;
+      flex-direction: column;
+      gap: 155px;
+      @media (max-width: 991px) {
+        gap: 100px;
+      }
+      @media (max-width: 767px) {
+        gap: 80px;
+      }
+      @media (max-width: 575px) {
+        gap: 40px;
+      }
+    }
+
+    .single-category-wrapper {
+      display: flex;
+      gap: 60px;
+      @media (max-width: 991px) {
+        gap: 40px;
+      }
+      @media (max-width: 767px) {
+        flex-direction: column;
+        gap: 30px;
+      }
+      @media (max-width: 575px) {
+        gap: 24px;
+      }
+
+      .thumbnail {
+        width: 54%;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+
+      .text {
+        width: 46%;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+
+        .title {
+          font-weight: 600;
+        }
+
+        .excerpt {
+          margin: 28px 0 60px;
+          @media (max-width: 991px) {
+            margin: 18px 0 40px;
+          }
+          @media (max-width: 767px) {
+            margin: 15px 0 20px;
+          }
+          @media (max-width: 767px) {
+            margin: 16px 0 24px;
+          }
+          line-height: 1.6;
+        }
+
+        .btn-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 55px;
+          @media (max-width: 991px) {
+            gap: 30px;
+          }
+          @media (max-width: 850px) {
+            justify-content: space-between;
+            gap: 0;
+          }
+          @media (max-width: 767px) {
+            gap: 50px;
+            justify-content: flex-start;
+          }
+          @media (max-width: 400px) {
+            gap: 40px;
+          }
+
+          .btn-red-full {
+            padding: 22px 25px;
+            @media (max-width: 991px) {
+              padding: 20px 22px;
+              font-size: 15px;
+            }
+            @media (max-width: 767px) {
+              padding: 18px 22px;
+              font-size: 14px;
+            }
+            @media (max-width: 575px) {
+              padding: 16px 29px;
+              font-size: 13px;
+            }
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.5;
+          }
+
+          .btn-red-underline {
+            padding: unset;
+            white-space: nowrap;
+            @media (max-width: 400px) {
+              text-transform: capitalize;
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .kariera-posts {
+    margin-top: 155px;
+    margin-bottom: 155px;
+    @media (max-wdith: 991px) {
+      margin-top: 120px;
+      margin-bottom: 120px;
+    }
+    @media (max-width: 767px) {
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    @media (max-width: 575px) {
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+
+    .wrapper-posts {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      @media (max-width: 767px) {
+        margin-top: 50px;
+        gap: 24px;
+      }
+      @media (max-width: 575px) {
+        margin-top: 40px;
+      }
+    }
+
+    .wrapper-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--gray);
+      @media (max-width: 767px) {
+        border-color: var(--blue-mist);
+      }
+
+      .mobile-wrapper {
+        @media (min-width: 768px) {
+          display: contents;
+        }
+        @media (max-width: 575px) {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+      }
+
+      .mobile-icon {
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+
+      .title {
+        line-height: 1.6;
+        font-weight: 400;
+        @media (max-width: 767px) {
+          color: var(--red);
+          font-weight: 700;
+        }
+      }
+
+      .salary {
+        line-height: 1.6;
+      }
+
+      &:hover {
+        @media (min-width: 768px) {
+          .title {
+            color: var(--red);
+            font-weight: 700;
+          }
+
+          .salary {
+            color: var(--red);
+          }
+
+          .btn-wrapper {
+            opacity: 1;
+            width: 114px;
+            transform: scale(1);
+          }
+        }
+      }
+
+      .inner-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+
+    .btn-wrapper {
+      opacity: 0;
+      width: 0;
+      transform: scale(0);
+      transition: opacity 0.3s;
+      @media (max-width: 767px) {
+        display: none;
+      }
+      .btn-red-full {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 400;
+        padding: 9px 17px;
+      }
+    }
+  }
+}

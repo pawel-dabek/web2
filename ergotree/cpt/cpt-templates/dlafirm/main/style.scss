@@ -1,0 +1,98 @@
+.main-archive-dlafirm {
+  .dla-firm-posts {
+    margin-top: 60px;
+    margin-bottom: 155px;
+    @media (max-width: 991px) {
+      gap: 100px;
+    }
+    @media (max-width: 767px) {
+      gap: 80px;
+    }
+    @media (max-width: 575px) {
+      margin-bottom: 80px;
+    }
+
+    .wrapper-posts {
+      display: flex;
+      flex-direction: column;
+      gap: 155px;
+      @media (max-width: 991px) {
+        gap: 100px;
+      }
+      @media (max-width: 767px) {
+        gap: 80px;
+      }
+      @media (max-width: 575px) {
+        gap: 40px;
+      }
+    }
+
+    .single-post-wrapper {
+      display: flex;
+      gap: 60px;
+      @media (max-width: 991px) {
+        gap: 40px;
+      }
+      @media (max-width: 767px) {
+        gap: 30px;
+      }
+      @media (max-width: 575px) {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .thumbnail {
+        width: 54%;
+        @media (max-width: 575px) {
+          width: 100%;
+        }
+      }
+
+      .text {
+        width: 46%;
+        @media (max-width: 575px) {
+          width: 100%;
+        }
+
+        .title {
+          font-weight: 600;
+        }
+
+        .excerpt {
+          margin: 28px 0 60px;
+          @media (max-width: 991px) {
+            margin: 18px 0 40px;
+          }
+          @media (max-width: 767px) {
+            margin: 15px 0 20px;
+          }
+          @media (max-width: 767px) {
+            margin: 16px 0 24px;
+          }
+          line-height: 1.6;
+        }
+
+        .btn-wrapper {
+          .btn-red-full {
+            padding: 22px 25px;
+            @media (max-width: 991px) {
+              padding: 20px 22px;
+              font-size: 15px;
+            }
+            @media (max-width: 767px) {
+              padding: 18px 22px;
+              font-size: 14px;
+            }
+            @media (max-width: 575px) {
+              padding: 16px 29px;
+              font-size: 13px;
+            }
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+}

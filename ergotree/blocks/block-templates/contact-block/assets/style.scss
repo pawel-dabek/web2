@@ -1,0 +1,133 @@
+.contact-block {
+  margin-top: 60px;
+
+  .my-container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  .order-1 {
+    @media (max-width: 767px) {
+      order: 1;
+    }
+  }
+
+  .order-2 {
+    @media (max-width: 767px) {
+      order: 2;
+    }
+  }
+
+  .order-3 {
+    @media (max-width: 767px) {
+      order: 3;
+    }
+  }
+
+  .order-4 {
+    @media (max-width: 767px) {
+      order: 4;
+    }
+  }
+
+  .order-5 {
+    @media (max-width: 767px) {
+      order: 5;
+    }
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @media (max-width: 767px) {
+      display: contents;
+    }
+
+    .single-block {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .label {
+        line-height: 1.6;
+      }
+
+      .desc {
+        line-height: 1.6;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+
+        .phone,
+        .mail {
+          line-height: 1.59;
+          text-decoration: none;
+          color: var(--gray);
+        }
+
+        .mail {
+          color: var(--red);
+          text-decoration: underline;
+          text-decoration-color: var(--red);
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media (max-width: 575px) {
+      gap: 10px;
+    }
+
+    .title {
+      span {
+        color: var(--gray-title);
+      }
+    }
+
+    .desc {
+      line-height: 1.6;
+    }
+
+    .btn-wrapper {
+      @media (max-width: 575px) {
+        margin-top: 10px;
+      }
+      .btn-red-border {
+        padding: 10px 35px;
+        text-decoration: none;
+        @media (max-width: 575px) {
+          padding: 16px 30px;
+        }
+        line-height: 1.5;
+      }
+    }
+
+    .map-wrapper {
+      margin-top: 20px;
+      aspect-ratio: 380/348;
+      width: 100%;
+      max-width: 380px;
+      @media (max-width: 991px) {
+        max-width: 330px;
+      }
+      @media (max-width: 767px) {
+        max-width: 500px;
+      }
+    }
+  }
+}

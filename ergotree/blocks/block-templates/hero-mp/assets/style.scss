@@ -1,0 +1,167 @@
+.hero-mp {
+  height: 590px;
+  display: flex;
+  @media (max-width: 991px) {
+    height: 554px;
+    padding: 140px 0 120px;
+  }
+  @media (max-width: 767px) {
+    height: 526px;
+    padding: 130px 0 130px;
+  }
+  @media (max-width: 575px) {
+    height: 496px;
+    padding: 120px 0 150px;
+  }
+  background: var(--red);
+
+  .without-buttons {
+    margin-top: 40px;
+  }
+
+  .red {
+    color: var(--red) !important;
+  }
+
+  .scroll-down {
+    @media (min-width: 576px) {
+      display: none;
+    }
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 2s ease-in-out 0s infinite;
+
+    &.red {
+      svg {
+        path {
+          fill: var(--red);
+        }
+      }
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      bottom: 40px;
+    }
+    50% {
+      bottom: 25px;
+    }
+    100% {
+      bottom: 40px;
+    }
+  }
+
+  .title {
+    color: #fff;
+    font-size: 80px;
+    line-height: 1.24;
+    margin-bottom: 40px;
+    white-space: nowrap;
+    @media (max-width: 991px) {
+      font-size: 60px;
+      margin-bottom: 34px;
+    }
+    @media (max-width: 767px) {
+      font-size: 45px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 575px) {
+      font-size: 30px;
+      margin-bottom: 24px;
+      white-space: unset;
+    }
+  }
+
+  .smaller {
+    font-size: 65px;
+    @media (max-width: 991px) {
+      font-size: 55px;
+    }
+    @media (max-width: 767px) {
+      font-size: 45px;
+    }
+    @media (max-width: 575px) {
+      font-size: 30px;
+    }
+  }
+
+  .desc {
+    margin-bottom: 60px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 575px) {
+      margin-bottom: 40px;
+    }
+    color: #fff;
+
+    br {
+      &.mobile {
+        @media (max-width: 575px) {
+          display: none;
+        }
+      }
+      &.tablet {
+        @media (min-width: 576px) and (max-width: 991px) {
+          display: none;
+        }
+      }
+      &.desktop {
+        @media (min-width: 992px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .btn-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    @media (max-width: 575px) {
+      gap: 22px;
+    }
+
+    .btn-white-full {
+      padding: 24px 73px;
+      line-height: 1.5;
+      font-weight: 600;
+      max-width: 280px;
+      text-align: center;
+
+      @media (max-width: 575px) {
+        max-width: unset;
+        padding: 16px 40px;
+      }
+    }
+
+    .btn-second {
+      @media (max-width: 575px) {
+        flex-direction: column;
+        gap: 2px;
+      }
+      line-height: 1.6;
+      color: #fff;
+      padding: 0;
+      display: flex;
+      gap: 5px;
+      transition: none;
+
+      a {
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+        font-weight: 400;
+        transition: 0.3s;
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
